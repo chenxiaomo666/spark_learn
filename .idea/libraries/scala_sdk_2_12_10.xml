@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="scala-sdk-2.12.10" type="Scala">
+    <properties>
+      <compiler-classpath>
+        <root url="file://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-compiler-2.12.10.jar" />
+        <root url="file://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-library-2.12.10.jar" />
+        <root url="file://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-reflect-2.12.10.jar" />
+      </compiler-classpath>
+    </properties>
+    <CLASSES>
+      <root url="jar://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-library-2.12.10.jar!/" />
+      <root url="jar://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-parser-combinators_2.12-1.1.2.jar!/" />
+      <root url="jar://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-reflect-2.12.10.jar!/" />
+      <root url="jar://F:/BIgData/spark/spark-3.0.3-bin-hadoop3.2/jars/scala-xml_2.12-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://www.scala-lang.org/api/2.12.10/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
