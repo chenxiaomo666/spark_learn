@@ -1,5 +1,6 @@
 package com.atguigu.bigdata.spark.core.wc
 
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 object Spark02_WordCount {
@@ -11,7 +12,9 @@ object Spark02_WordCount {
     val sc = new SparkContext(sparkConf)
 
 
-    val lines = sc.textFile("datas")
+    // RDD的数据结构，
+    val lines: RDD[String] = sc.textFile("datas")
+    lines.foreach(println)
 
     val words = lines.flatMap(_.split(" "))
 
