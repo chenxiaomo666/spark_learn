@@ -28,8 +28,8 @@ object Spark01_WordCount {
     }
 
     // 5、将转换结果控制台打印
-    val array = wordToCount.collect()
-    array.foreach(println)
+     val array = wordToCount.collect()
+     array.foreach(println)
 
 
     // 关闭连接

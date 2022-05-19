@@ -1,7 +1,7 @@
 # Spark_learn
 ## 概记
 ### 当前进度
-P36/P201
+P46/P201
 ### 课程信息
 
 1.课程跟随：[尚硅谷Spark](https://www.bilibili.com/video/BV11A411L7CK)
@@ -46,3 +46,7 @@ Executor是执行的节点，
 * 可分区，并行计算；
 * 移动数据不如移动计算，数据不移动；
 * RDD主要是用于讲逻辑进行封装，并生成Task发送给Executor节点进行计算；
+
+##### RDD转换算子
+###### 1. Value类型
+
