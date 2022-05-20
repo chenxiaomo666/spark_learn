@@ -49,4 +49,19 @@ Executor是执行的节点，
 
 ##### RDD转换算子
 ###### 1. Value类型
+* map算子是分区内一个数据一个数据的执行，类似于查串行操作，注意是分区内，不同分区可并行；
+* map是数据进行转换和改变，不会减少和增多数据；
+* map性能低，但是不占内存；
+* mapPartitions算子是以分区为单位进行批处理操作，也就是可以一次性读取整个分区的数据进行操作；
+* mapPartitions是返回一个迭代器，可以增加或者减少数据；
+* mapPartitions性能高，但是占用内存，短时间不释放；
+> 完成比完美更重要~
 
+* mapParatitionsWithIndex: 相比于mapPartitions多一个分区的索引；
+* flatMap：将函数进行扁平化后在映射处理，说着很抽象，别人的博客上看了一个图，特别好，沾一下：
+
+![image-20220520220323189](https://20178666.oss-cn-beijing.aliyuncs.com/img/image-20220520220323189.png)
+
+![image-20220520220344879](https://20178666.oss-cn-beijing.aliyuncs.com/img/image-20220520220344879.png)
+
+* glom：将同一个分区的数据直接转换为相同类型的内存数组进行处理，分区不变
