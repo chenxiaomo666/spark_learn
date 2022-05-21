@@ -1,7 +1,7 @@
 # Spark_learn
 ## 概记
 ### 当前进度
-P65/P201
+P81/P201    P153/P201
 ### 课程信息
 
 1.课程跟随：[尚硅谷Spark](https://www.bilibili.com/video/BV11A411L7CK)
@@ -80,4 +80,25 @@ Executor是执行的节点，
 
 ###### 3. Key-Value类型
 * partitionBy：将数据按照指定的Partitioner重新进行分区，Spark默认分区器是HashPartitioner
-* reduceByKey:
+* reduceByKey：可以将数据按照相同的Key对Value进行聚合，分区内和分区间的计算逻辑相同
+* groupByKey：将分区的数据直接转换为相同类型的内存数组进行后续处理；
+
+> reduceByKey和groupByKey的区别： 它们两个都可以对数据进行分组，
+>> 从 shuffle 的角度：reduceByKey 和 groupByKey 都存在 shuffle 的操作，但是 reduceByKey
+可以在 shuffle 前对分区内相同 key 的数据进行预聚合（combine）功能，这样会减少落盘的
+数据量，而 groupByKey 只是进行分组，不存在数据量减少的问题，reduceByKey 性能比较
+高。
+>> 从功能的角度：reduceByKey 其实包含分组和聚合的功能。GroupByKey 只能分组，不能聚
+合，所以在分组聚合的场合下，推荐使用 reduceByKey，如果仅仅是分组而不需要聚合。那
+么还是只能使用 groupByKey
+
+* aggregateByKey：将数据根据不同的规则进行分区内计算和分区间计算，即可以完成分区内取最大值，分区间再相加的操作 
+* join：在类型为(k,v)和(k,w)的RDD上调用，返回一个相同key对应的所有元素连接在一起
+> join:相当于内连接，只保留两个rdd相同key的结果，相当于inner join
+> leftOuterJoin：相当于是左外连接
+> rightOuterJoin：相当于是右外连接
+> fullOuterJoin：全连接
+
+* cogroup：
+
+`记于：2022-05-21 23:30:52，刚学完了RDD的转换算子，但是SparkSQL十分的紧急，所以跳过中间的，直接看SparkSQL，估计会遇到环境配置的问题吧，毕竟是用到sql，起码会有数据库的问题`

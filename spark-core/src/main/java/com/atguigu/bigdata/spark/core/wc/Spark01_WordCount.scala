@@ -12,7 +12,7 @@ object Spark01_WordCount {
 
     // 执行业务操作，
     // 1、读取文件，获取一行一行的数据，
-    val lines = sc.textFile("datas")
+    val lines = sc.textFile("datas/1.txt")
 
     // 2、将每行的数据进行拆分，形成单词，
     val words = lines.flatMap(_.split(" "))
@@ -22,9 +22,7 @@ object Spark01_WordCount {
 
     // 4、对分组后的数据进行转换，
     val wordToCount = wordGroup.map{
-      case (word, list) => {
-        (word, list.size)
-      }
+      x=> (x._1, x._2.size)
     }
 
     // 5、将转换结果控制台打印
