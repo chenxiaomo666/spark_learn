@@ -102,3 +102,19 @@ Executor是执行的节点，
 * cogroup：
 
 `记于：2022-05-21 23:30:52，刚学完了RDD的转换算子，但是SparkSQL十分的紧急，所以跳过中间的，直接看SparkSQL，估计会遇到环境配置的问题吧，毕竟是用到sql，起码会有数据库的问题`
+
+
+## SparkSQL
+### hive和SparkSQL
+* Spark SQL是Spark用于结构化数据处理的spark模块
+* hive底层是MapReduce，SparkSQLs是基于spark
+
+#### DataFrame
+是一个以RDD为基础的分布式数据集，传统数据库的二维表格
+* createTempView(): 闯进临时视图，只在本次session中起作用
+* createOrReplaceTempView(): 见名知意，同上，同名可替代
+* createOrReplaceGlobalTempView(): 创建全部session的连接都可以使用的视图，使用的时候global_temp.tablename使用
+
+##### DSL语法
+
+#### DataSet
