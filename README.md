@@ -123,4 +123,9 @@ Executor是执行的节点，
 #### UDF
 用户可以通过spark.udf功能添加自定义函数，实现自定义功能 
 
+### 数据的加载和保存
+SparkSQL默认读取和保存的文件格式是parquet
+
+> spark.read.load是加载数据的通用方法，之前使用的是spark.read.json()读取json数据
+
 
