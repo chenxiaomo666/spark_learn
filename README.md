@@ -6,7 +6,16 @@ P81/P201    P174/P201
 
 1.课程跟随：[尚硅谷Spark](https://www.bilibili.com/video/BV11A411L7CK)
 ### 遇到的坑
-1.配置环境老费劲了
+#### 1.配置环境老费劲了
+有时间写一下遇到的坑和解决办法
+#### 2.spark连接mysql问题：
+2.1. 在尚硅谷Spark视频176节的时候，有一个spark连接的操作，用他的配置连接不上，
+出现`Could not create connection to database server`的错误，
+经过排查，是因为pom文件的mysql版本和自己要连接的版本不对，
+可以在任意一个可以执行sql的地方，执行`select version() from dual`，找出自己的mysql版本号，然后替换pom版本号，
+
+2.2. 再然后可能会出现·Loading class `com.mysql.jdbc.Driver'. This is deprecated`，错误，
+可将`com.mysql.jdbc.Driver`替换成`com.mysql.cj.jdbc.Driver`，即可解决问题
 
 ## 课程笔记
 ### 1 *********
