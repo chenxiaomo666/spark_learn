@@ -19,7 +19,7 @@ object Spark06_SparkSQL_Test {
     // val rdd_user_visit_action = sc.textFile("datas/user_visit_action.txt").map(r=>r.split(" "))
     val df_user_visit_action = spark.read.text("datas/user_visit_action.txt")
     val rdd_user_visit_action = df_user_visit_action.rdd
-    rdd_user_visit_action.map()
+    // rdd_user_visit_action.map()
 
     spark.close()
   }
