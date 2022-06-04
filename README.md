@@ -138,3 +138,6 @@ SparkSQL默认读取和保存的文件格式是parquet
 > spark.read.load是加载数据的通用方法，之前使用的是spark.read.json()读取json数据
 
 
+算子以外的代码都是再driver端执行，算子里面的代码都是在executor端执行，
+
+
