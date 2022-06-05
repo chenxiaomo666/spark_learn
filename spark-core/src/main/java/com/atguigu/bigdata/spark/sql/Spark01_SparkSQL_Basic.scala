@@ -31,6 +31,7 @@ object Spark01_SparkSQL_Basic {
 
     // RDD <=> DataFrame
     val rdd = spark.sparkContext.makeRDD(List((1, "zhangsan", 30), (2, "lisi", 40)))
+    rdd.collect().foreach(println)
 
     val df = rdd.toDF("id", "name", "age")  // 这里参数不是必选的，但是有参数比较好
     df.show()
