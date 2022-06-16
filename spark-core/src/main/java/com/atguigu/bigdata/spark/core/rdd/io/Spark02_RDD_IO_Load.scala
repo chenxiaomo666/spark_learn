@@ -10,7 +10,7 @@ object Spark02_RDD_IO_Load {
     val sc = new SparkContext(sparkConf)
 
     val rdd1 = sc.textFile("output1")
-    rdd1.collect().foreach(println))
+    rdd1.collect().foreach(println)
     val rdd2 = sc.objectFile[(String, Int)]("output2")
     rdd2.collect().foreach(println)
     val rdd3 = sc.sequenceFile[String, Int]("output3")
