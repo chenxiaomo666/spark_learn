@@ -1,7 +1,7 @@
 # Spark_learn
 ## 概记
 ### 当前进度
-P116/P201    P181/P201
+P116/P201    P181/P201   P192/P201：Streaming
 ### 课程信息
 
 1.课程跟随：[尚硅谷Spark](https://www.bilibili.com/video/BV11A411L7CK)
@@ -139,5 +139,10 @@ SparkSQL默认读取和保存的文件格式是parquet
 
 
 算子以外的代码都是再driver端执行，算子里面的代码都是在executor端执行，
+
+
+## SparkStreaming
+准实时，微批次。
+
 
 
